@@ -1,7 +1,7 @@
 import { User } from '../models/User.js';
-import type { User as UserType } from '../types/user.js';
+import type { RegisterUser } from '../types/user.js';
 class AuthService {
-  async createUser(user: UserType) {
+  async createUser(user: RegisterUser) {
     const newUser = await User.create(user);
     return newUser;
   }

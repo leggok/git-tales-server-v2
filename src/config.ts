@@ -4,3 +4,4 @@ dotenv.config();
 
 export const PORT = process.env.PORT || 3000;
 export const DB_NAME = process.env.DB_NAME || 'git-tales';
+export const SALT_ROUNDS = parseInt(process.env.SALT_ROUNDS || '10');

@@ -1,8 +1,12 @@
-export type User = {
-  user_id: string;
+export type RegisterUser = {
   name: string;
   email: string;
   password: string;
-  created_at: Date;
-  updated_at: Date;
 };
+
+export type LoginUser = {
+  email: string;
+  password: string;
+};
+
+export type User = RegisterUser | LoginUser;

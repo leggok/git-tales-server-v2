@@ -1,0 +1,10 @@
+import bcrypt from 'bcrypt';
+import { SALT_ROUNDS } from '../config.js';
+
+export const hashPassword = async (password: string) => {
+  return await bcrypt.hash(password, SALT_ROUNDS);
+};
+
+export const comparePassword = async (password: string, hashedPassword: string) => {
+  return await bcrypt.compare(password, hashedPassword);
+};
